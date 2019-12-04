@@ -1,10 +1,16 @@
+-- Every Haskell package must have a name and a version even if you
+-- don't care at all what they are.  We just use some dummy ones.
 name:                my-dummy-package
 version:             0.0.0.0
+
 build-type:          Simple
 cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
+  -- Every module in your package must be listed here.  Additionally,
+  -- every source file must contain its name (somewhat redundantly) at
+  -- the top in a "module ... where" line.
   exposed-modules:     MyModule,
                        My.Dotted.Module
   -- Packages you depend on should be specified under "build-depends"
